@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright 2020 TechnoLibre. (https://technolibre.ca)
+     License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl). -->
+<odoo>
+
+    <template id="portal_invoice_approbation_page" name="Invoice Approbation Portal Template" inherit_id="account.portal_invoice_page">
+        <xpath expr="//t[@t-set='entries']/ul/li/div[hasclass('o_download_pdf')]" position="before">
+
+            <a t-if="invoice.has_to_be_signed(True)" role="button" class="btn btn-primary btn-block mb8" data-toggle="modal" data-target="#modalaccept" href="#">
+                <i class="fa fa-check"/>
+                Accept &amp; Sign
+            </a>
+            <a t-elif="invoice.has_to_be_paid(True)" role="button" class="btn btn-primary btn-block mb8" data-toggle="modal" data-target="#modalaccept" href="#">
+                <i class="fa fa-check"/>
+                <t t-if="not invoice.signature">Accept &amp; Pay</t>
+                <t t-else="">Pay now</t>
+            </a>
+
+        </xpath>
+    </template>
+</odoo>
