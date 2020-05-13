@@ -11,6 +11,7 @@
     "installable": True,
     "depends": [
         'account',
+        'portal',
     ],
     "license": "AGPL-3",
     "data": [
