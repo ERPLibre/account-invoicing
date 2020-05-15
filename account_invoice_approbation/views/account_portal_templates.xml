@@ -176,12 +176,14 @@
                         <b>Feedback</b>
                     </a>
                 </div>
+                <!--
                 <div class="col-sm-auto mt8">
                     <a role="button" class="btn btn-danger" data-toggle="modal" data-target="#modaldecline" href="#">
                         <i class="fa fa-times"/>
                         Reject
                     </a>
                 </div>
+                -->
             </div>
 
         </xpath>
